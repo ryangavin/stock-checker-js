@@ -1,6 +1,4 @@
-const playwright = require("playwright")
-
-console.log("Ayyo, hello world!");
+const playwright = require("playwright");
 
 (async () => {
   const browser = await playwright.chromium.launch({ headless: false });
