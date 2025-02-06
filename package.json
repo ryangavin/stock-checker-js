@@ -10,6 +10,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bullmq": "^5.40.0",
+    "express": "^4.21.2",
     "playwright": "^1.50.1"
   }
 }
