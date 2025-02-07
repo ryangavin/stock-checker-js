@@ -1,8 +1,12 @@
 {
-  "name": "price-checker",
+  "name": "stock-checker",
   "version": "1.0.0",
-  "main": "app/checkers/targetChecker.js",
+  "main": "main.js",
   "type": "module",
+  "bin": {
+    "server": "./app/server.js",
+    "stock-checker": "./app/cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -9,9 +9,7 @@ const BestBuyChecker = async (page) => {
   // Get the SKU from the url
   const sku = page.url().match(/skuId=(\d+)/)[1]
   const button = await quickAssessmentSection.locator('button[data-sku-id="' + sku + '"]')
-  const availability = await (await button.innerHTML()).match('Add to Cart')
-  availability ? console.log('Available') : console.log('Not Available')
-  return availability
+  return await (await button.innerHTML()).match('Add to Cart')
 }
 
 export default BestBuyChecker

@@ -3,7 +3,6 @@ import { chromium } from 'playwright'
 import checkBestBuy from './bestBuyChecker.js'
 import checkTarget from './targetChecker.js'
 
-
 const stockChecker = async (url) => {
   const browser = await chromium.launch({
     headless: false,
@@ -32,11 +31,10 @@ const stockChecker = async (url) => {
     console.error('Unsupported website')
   }
 
-  // If the item is in stock, send a notification
-  console.log(stock ? 'Item is IN STOCK' : 'Item is out of stock')
-
   // Cleanup
   await browser.close()
+
+  return stock
 }
 
 export default stockChecker
